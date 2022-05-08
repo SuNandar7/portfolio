@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wholepages{
+    display: none;
+    transition: all 0.3s;
+}
+
+/* Start Header */
+header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url('../assets/libs/img/cover1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* Start Navbar */
+.navbar{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    padding: 25px 30px;
+
+    transition: all 0.3s;
+}
+
+.navmenus{
+    background: linear-gradient(rgba(0,0,0.6),rgba(0,0,0,0.7));
+    padding: 8px 30px;
+}
+
+.menuitems{
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: color 0.4s;
+}
+
+.menuitems:hover{
+    color: #e0c00a;
+}
+
+.menuitems.active{
+    color: #cc851c;
+}
+
+.lines1,.lines2,.lines3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.4s;
+}
+
+.changes .lines1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.changes .lines2{
+    opacity: 0;
+}
+
+.changes .lines3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* End Navbar */
+/* Start Banner */
+.banners{
+    width: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.bannerheaders{
+    animation-name: bannerani;
+    animation-duration: 2s;
+}
+
+.bannerparas{
+    animation-name: bannerani;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bannerani{
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* End Banner */
+/* End Header */
+
+/* Start About Section */
+.abouts{
+    padding-top: 100px;
+}
+
+.underlines{
+    width: 150px;
+    border: 2px solid rgb(90, 90, 90);
+}
+
+.aboutimgs{
+    transition: all 0.4s ease-in-out;
+}
+
+.aboutimgs:hover{
+ transform: translate(-20px,-20px);
+}
+
+.aboutmes{
+    line-height: 2;
+}
+
+.resumes{
+    margin-top: 70px;
+}
+
+.wrappers{
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.wrappers .center-lines{
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: rgb(211, 210, 210);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrappers .rows{
+    display: flex;
+}
+
+.wrappers .rows-1{
+    justify-content: flex-start;
+}
+
+.wrappers .rows-2{
+    justify-content: flex-end;
+}
+
+.wrappers .rows section{
+    background: rgb(36, 35, 35);
+    color: #eee;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.wrappers .rows section:hover{
+    transform: translateY(-5px);
+}
+
+.wrappers .rows section::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: rgb(36, 35, 35);
+    position: absolute;
+    top: 28px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.rows-1 section::before{
+    right: -7px;
+}
+
+.rows-2 section::before{
+    left: -7px;
+}
+
+.rows section .icons,.center-lines .scroll-icons{
+    position: absolute;
+    background: #e0c00a;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 0 0 #e24f4f,inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05)
+}
+
+.center-lines .scroll-icons{
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rows-1 section .icons{
+    top: 13px;
+    right: -60px;
+}
+
+.rows-2 section .icons{
+    top: 13px;
+    left: -60px;
+}
+
+.rows section .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rows section .details .titles{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.rows section p{
+    margin: 10px 0 17px 0;
+}
+
+/* .rows section .bottoms a{
+    text-decoration: none;
+    background: rgb(252, 214, 2);
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+} */
+
+@media(max-width: 790px){
+    .wrappers .center-lines{
+        left: 40px;
+    }
+
+    .wrappers .rows{
+        margin: 30px 0 3px 60px;
+    }
+
+    .wrappers .rows section{
+        width: 100%;
+    }
+
+    .rows-1 section::before{
+        left: -7px;
+    }
+
+    .rows-1 section .icons{
+        left: -60px;
+    }
+}
+
+@media(max-width: 440px){
+    .wrappers .center-lines,
+    .rows section::before,
+    .rows section .icons{
+        display: none;
+    }
+
+    .wrappers .rows{
+        margin: 10px 0;
+    }
+}
+/* End About Section */
+
+/* Start Skill Section */
+.skillprogresses{
+    margin-top: 100px;
+}
+
+.skills{
+    background-color: #000;
+    overflow: hidden;
+}
+
+.skillbgones,.skillbgtwos,.skillbgthrees{
+    background-color: rgb(31, 30, 30);
+
+    transition: all 0.3s;
+}
+
+.skillbgones:hover,.skillbgtwos:hover,.skillbgthrees:hover{
+    transform: translateY(-10px);
+}
+
+.lines{
+    width: 50px;
+    border: 1px solid #fff;
+    margin: auto;
+}
+
+.movefromlefts{
+    animation: movefromlefts 2s;
+}
+
+.movefromrights{
+    animation: movefromrights 2s;
+}
+
+.skillbgones.fromlefts{
+    animation: fromlefts 2s;
+}
+
+.skillbgtwos.frombottoms{
+    animation: frombottoms 2s;
+}
+
+.skillbgthrees.fromrights{
+    animation: fromrights 2s;
+}
+
+@keyframes fromlefts{
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fromrights{
+    0%{
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes frombottoms{
+    0%{
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movefromlefts{
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes movefromrights{
+    0%{
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* End Skill Section */
+
+/* Start Portfolio Section */
+.projectlists{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.projectlists.activeitems{
+    color: #06b7bd;
+    border-bottom: 1px solid rgb(139, 139, 139);
+}
+
+.card{
+    overflow: hidden;
+}
+
+.portfolioimgs{
+    transition: all 0.4s ease-in-out;
+}
+
+.portfolioimgs:hover{
+    transform: scale(1.1);
+}
+/* End Portfolio Section */
+
+/* Start Contact Section */
+.inputs:focus{
+    box-shadow: none;
+}
+
+.sendbtns{
+    background-color: #000;
+    color: #cc851c;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+
+    transition: all 0.3s ease;
+}
+
+.sendbtns:hover{
+    color: #cc851c;
+    transform: translateY(-4px);
+}
+
+.sendbtns:focus{
+    outline: none;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacticons{
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacticons .fa-envelope,.contacticons .fa-phone,.contacticons .fa-map{
+    animation: myani 1s infinite;
+}
+
+.sociallinks{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes myani{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/* End Contact Section */
+
+/* Start Footer */
+.footerlinks{
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+
+    transition: all 0.3s;
+}
+
+.footerlinks:hover{
+    color: #e0c00a;
+}
+
+.uparrows{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+/* End Footer */
+
+.spinners{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s
+}
+
